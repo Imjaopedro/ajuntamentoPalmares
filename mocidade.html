@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajuntamento Vila Palmares - 17/05</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #F4F4F4;
+            color: #333;
+        }
+
+        header {
+            background-color: #B3D9FF;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .intro {
+            background-color: #FFF8E1;
+            border-left: 5px solid #B3D9FF;
+            padding: 20px;
+            margin-bottom: 40px;
+            border-radius: 6px;
+        }
+
+        .intro h2 {
+            color: #B3D9FF;
+            margin-bottom: 10px;
+        }
+
+        .intro p,
+        .intro li {
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .carousel {
+            position: relative;
+            max-width: 100%;
+            margin-bottom: 40px;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-control {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 2rem;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #FFF8E1;
+            border: 1px solid #B3D9FF;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            background-color: #f0dfb5;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            color: #B3D9FF;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 1.05rem;
+        }
+
+        footer {
+            background-color: #B3D9FF;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background-color: white;
+            border-radius: 6px;
+            padding: 30px;
+            width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h2 {
+            font-size: 1.5rem;
+            color: #B3D9FF;
+        }
+
+        .modal-body {
+            margin-top: 15px;
+            font-size: 1.1rem;
+        }
+
+        .close {
+            font-size: 1.5rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: #B3D9FF;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .carousel img {
+                height: 350px;
+            }
+
+            header h1 {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .carousel img {
+                height: 250px;
+            }
+
+            .intro p,
+            .intro li,
+            .card p {
+                font-size: 0.95rem;
+            }
+
+            .card h3 {
+                font-size: 1.1rem;
+            }
+        }
+		
+		
+		.convite {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .convite img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .convite h3 {
+      margin-bottom: 15px;
+      color: #B3D9FF;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ajuntamento Vila Palmares - 17/05</h1>
+    </header>
+
+    <div class="container">
+        <section class="intro">
+            <h2>Orientações para o Evento</h2>
+            <p>A Paz de Deus, querida mocidade!</p>
+            <p>Com alegria, comunicamos nosso encontro especial no sábado, 17/05/2025, na chácara do irmão Tiãozinho.</p>
+            <p>Nosso ponto de encontro será às <strong>06h40 na igreja da Vila Palmares</strong>, com saída logo em seguida. Chegaremos à chácara por volta de <strong>08h20</strong> e, no fim do dia, congregaremos na comum <strong>Parque das Lavras (Suzano)</strong>.</p>
+            <p><strong>Contribuição:</strong> R$ 20,00 por pessoa (transporte e alimentação) até quarta-feira, via Pix: <strong>519.061.868-47 – Henry Franchi</strong></p>
+            <p><strong>Na preparação de Deus pedimos que cada moço e moça leve um prato doce ou salgado</strong>, conforme a lista a seguir, e 1 bebida (suco ou refrigerante). Evitem repetir pratos para garantir variedade.</p>
+            <p><strong>Roupas e itens pessoais:</strong></p>
+            <ul>
+                <li><strong>Moços:</strong> Calça tactel, roupa leve, troca para o culto, toalha e itens de higiene.</li>
+                <li><strong>Moças:</strong> Saia com legging, roupa confortável, troca para o culto, toalha e higiene.</li>
+            </ul>
+            <p><strong>Testemunho cristão:</strong> Vamos manter bom comportamento, respeito e cuidado com o local. Esse encontro é uma bênção e nosso testemunho deve glorificar a Deus (II Coríntios 2:15).</p>
+            <p>Contamos com sua presença e disposição! Que seja um dia alegre e edificante!</p>
+            <p><strong>Deus abençoe, até sábado! ❤️</strong></p>
+        </section>
+		
+		
+		<section class="intro" style="background-color: #B3D9FF; padding: 40px 20px; text-align: center;">
+  <div style="max-width: 800px; margin: auto;">
+    <h1 style="font-size: 2.5rem; font-weight: bold; color: #003366;">Seja bem-vindo ao Ajuntamento Vila Palmares!</h1>
+    <p style="font-size: 1.2rem; color: #003366; margin-top: 20px;">
+      Aqui você poderá acompanhar e o nosso grupo de organização.
+    </p>
+  
+    <!-- Botão do grupo do WhatsApp -->
+    <div style="margin-top: 30px;">
+      <a href="https://chat.whatsapp.com/EG9xIn...9eu6u" target="_blank" style="
+          background-color: #25D366;
+          color: white;
+          padding: 12px 25px;
+          font-size: 1.1rem;
+          border-radius: 6px;
+          text-decoration: none;
+          display: inline-block;
+          transition: background-color 0.3s ease;
+        " onmouseover="this.style.backgroundColor='#1ebe57'" onmouseout="this.style.backgroundColor='#25D366'">
+        📲 Entrar no Grupo do WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+
+        <!-- Cronograma -->
+        <section class="card-container">
+            <div class="card" onclick="openModal('06:40', 'Saída da Vila Palmares às 06:40 para Chácara do nosso Irmão Tiãozinho')"><h3>06:40</h3><p>Saída da Vila Palmares</p></div>
+            <div class="card" onclick="openModal('08:20', 'Chegada na Chácara')"><h3>08:20</h3><p>Chegada na Chácara</p></div>
+            <div class="card" onclick="openModal('08:30 - 09:30', 'Café da Manhã  Mocidade que snetir alegria levar um prato de salgado ou doce. Consultar Lista que estará no WhatsApp para que possamos ter variedade de pratos!')"><h3>08:30 - 09:30</h3><p>Café da Manhã</p></div>
+            <div class="card" onclick="openModal('09:30 - 10:20', 'Brincadeira: Tabuleiro Humano  Moços x Moças em uma gincana onde cada equipe deverá passar o máximo de casas possiveis como se estivesse em um tabuleiro, quando se encontrarem deverão jogar jokenpo quem vencer continua')"><h3>09:30 - 10:20</h3><p>Brincadeira: Tabuleiro Humano</p></div>
+            <div class="card" onclick="openModal('10:30 - 11:20', 'Queimada: 4 Times (Eliminatória) mata-mata de queimada. Times serão sorteados na Sexta-Feira antes do nosso ajuntamento. Fiquem ligados!')"><h3>10:30 - 11:20</h3><p>Queimada: 4 Times (Eliminatória)</p></div>
+            <div class="card" onclick="openModal('11:30 - 12:20', 'Pique Bandeira: 4 Times (Eliminatória) mata-mata de pique-bandeira. Times serão sorteados na Sexta-Feira antes do nosso ajuntamento. Fiquem ligados')"><h3>11:30 - 12:20</h3><p>Pique Bandeira: 4 Times (Eliminatória)</p></div>
+            <div class="card" onclick="openModal('12:30 - 13:30', 'Almoçar pois crente só sbae comer :)')"><h3>12:30 - 13:30</h3><p>Almoço</p></div>
+            <div class="card" onclick="openModal('13:30 - 13:40', 'Recomposição Almoço')"><h3>13:30 - 13:40</h3><p>Recomposição Almoço</p></div>
+            <div class="card" onclick="openModal('13:40 - 14:30', 'Torta na Cara brincadeira onde Nosso Irmaão Abner irá fazer perguntas e a mocidade terá que responder quem não acertar leva tortada na cara')"><h3>13:40 - 14:30</h3><p>Torta na Cara</p></div>
+            <div class="card" onclick="openModal('14:40 - 15:40', 'Futebol | Vôlei')"><h3>14:40 - 15:40</h3><p>Futebol | Vôlei</p></div>
+            <div class="card" onclick="openModal('15:40 - 16:50', 'Tocata: Violão, Instrumentos Moços e Moças que tocam instrumento, por favor levar. Você está convocado')"><h3>15:40 - 16:50</h3><p>Tocata: Violão, Instrumentos</p></div>
+            <div class="card" onclick="openModal('17:00', 'Banho bem Rápido Banho bem Rápido para chegarmos cedo na igreja e não dar prejuizo aos irmão hehehehehe. Lembrem-se do kit de higiene')"><h3>17:00</h3><p>Banho bem Rápido</p></div>
+            <div class="card" onclick="openModal('18:30', 'Ir Congregar Parque das Lavras Localização Logradouro: Rua Caminho das Lavras, 1000 CEP: 08640-545 Cidade: Suzano, SP, Brasil Complemento: Chácaras Casemiro')"><h3>18:30</h3><p>Ir Congregar Parque das Lavras</p></div>
+            <div class="card" onclick="openModal('Saída: Indefinida', 'Indefinido')"><h3>Saída: Indefinida</h3><p>Fica a critério do grupo</p></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Ajuntamento Vila Palmares. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="eventModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Título do Horário</h2>
+                <button class="close" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <p id="modalDescription">Descrição do Evento</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Abre o modal com o título e a descrição do evento
+        function openModal(time, description) {
+            document.getElementById('modalTitle').innerText = time;
+            document.getElementById('modalDescription').innerText = description;
+            document.getElementById('eventModal').style.display = 'flex';
+        }
+
+        // Fecha o modal
+        function closeModal() {
+            document.getElementById('eventModal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
